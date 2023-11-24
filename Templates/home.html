@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Discover a transformative online platform dedicated to making a difference. Our initiative in Kigali connects surplus food from restaurants and hotels with charitable institutions, especially children's homes. Be part of our mission to efficiently collect, coordinate, and redistribute excess food, promoting social responsibility, environmental conservation, and a brighter future for vulnerable communities.">
+    <meta property="og:title" content="Good Samaritan">
+    <meta property="og:description" content="Discover a transformative online platform dedicated to making a difference...">
+    <meta property="og:image" content="url_to_your_image">
+    <meta property="og:url" content="url_to_your_website">
+    <link rel="stylesheet" href="/Static/home.css">
+    <title>Good Samaritan</title>
+</head>
+<body>
+    <header>
+        <p class="logo">Good Samaritan</p>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="volunteer.html">Volunteer</a></li>
+                <li><a href="donate.html">Donate</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="hero">
+            <h2>Welcome to Good Samaritan</h2>
+            <p>Discover a transformative online platform dedicated to making a difference.</p>
+            <p>Our initiative in Kigali connects surplus food from restaurants and hotels with charitable institutions, especially children's homes. </p>
+            <p>Be part of our mission to efficiently collect, coordinate, and redistribute excess food, promoting social responsibility, environmental conservation, and a brighter future for vulnerable communities.</p>
+            
+        </div>
+        <div>
+          <img src="/images/good-samaritan.jpg" alt="Good Samaritan logo">
+          <a href="about.html">Learn More more about us and our mission.</a>   
+        </div>
+           
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Engineers. All rights reserved.</p>
+        <ul>
+            <li><img src="/images/Facebook_White.png" alt=""></li>
+            <li><img src="/images/Instagram_White.png" alt=""></li>
+            <li><img src="/images/Twitter_White.png" alt=""></li>
+        </ul>
+    </footer>
+</body>
+<script>
+    const paragraphs = document.querySelectorAll('main p');
+
+    const options = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.5,
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, options);
+
+    paragraphs.forEach(p => {
+      observer.observe(p);
+    });
+  </script>
+</html>
